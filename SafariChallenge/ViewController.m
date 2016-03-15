@@ -11,7 +11,8 @@
 @interface ViewController () <UIWebViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *variablewebView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-- (IBAction)onBackButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
 
 @end
 
@@ -39,12 +40,28 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.spinner stopAnimating];
+    self.backButton.enabled = self.variablewebView.canGoBack;
+
 }
 
 - (IBAction)onBackButtonPressed:(id)sender {
     if ([_variablewebView canGoBack]) {
         [_variablewebView goBack];
     }
+}
+
+- (IBAction)onForwardButtonPressed:(id)sender {
+    if ([_variablewebView canGoForward]) {
+        [_variablewebView goForward];
+    }
+}
+
+- (IBAction)onStopLoadingButtonPressed:(id)sender {
+    [_variablewebView stopLoading];
+}
+
+- (IBAction)onReloadButtonPressed:(id)sender {
+    [_variablewebView reload];
 }
 
 @end

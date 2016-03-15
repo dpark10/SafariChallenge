@@ -112,6 +112,36 @@
                                             <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4c-cw-1AS"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-V8-Jzq">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="54" y="26" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onForwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcP-AQ-AAN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wi-AF-JJY">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="X"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="100" y="26" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onStopLoadingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oa9-bL-De4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-yc-9fH">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Reload"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="138" y="26" width="47" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onReloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aaa-2b-p0X"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -122,6 +152,9 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="bpW-pZ-4gB"/>
+                                        <exclude reference="Xea-V8-Jzq"/>
+                                        <exclude reference="7wi-AF-JJY"/>
+                                        <exclude reference="s0A-yc-9fH"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Phn-bB-3LO"/>
@@ -132,6 +165,9 @@
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="bpW-pZ-4gB"/>
+                                        <include reference="Xea-V8-Jzq"/>
+                                        <include reference="7wi-AF-JJY"/>
+                                        <include reference="s0A-yc-9fH"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Phn-bB-3LO"/>
@@ -163,17 +199,17 @@
                                 <exclude reference="kf1-wR-SHJ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="7Yg-m0-JC4"/>
+                                <exclude reference="iW4-Ty-PGk"/>
+                                <exclude reference="Pb1-cE-ytq"/>
+                                <exclude reference="To6-g4-ggL"/>
                                 <exclude reference="2GV-uw-8uL"/>
                                 <exclude reference="AUq-jy-4H0"/>
                                 <exclude reference="Y2h-WH-htM"/>
                                 <exclude reference="jDU-0w-nMh"/>
                                 <exclude reference="rqY-XW-hQG"/>
-                                <exclude reference="Pb1-cE-ytq"/>
-                                <exclude reference="To6-g4-ggL"/>
                                 <exclude reference="atb-wC-P4M"/>
                                 <exclude reference="bu4-JQ-NLF"/>
-                                <exclude reference="7Yg-m0-JC4"/>
-                                <exclude reference="iW4-Ty-PGk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -184,21 +220,22 @@
                                 <include reference="kf1-wR-SHJ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="7Yg-m0-JC4"/>
+                                <include reference="iW4-Ty-PGk"/>
+                                <include reference="Pb1-cE-ytq"/>
+                                <include reference="To6-g4-ggL"/>
                                 <include reference="2GV-uw-8uL"/>
                                 <include reference="AUq-jy-4H0"/>
                                 <include reference="Y2h-WH-htM"/>
                                 <include reference="jDU-0w-nMh"/>
                                 <include reference="rqY-XW-hQG"/>
-                                <include reference="Pb1-cE-ytq"/>
-                                <include reference="To6-g4-ggL"/>
                                 <include reference="atb-wC-P4M"/>
                                 <include reference="bu4-JQ-NLF"/>
-                                <include reference="7Yg-m0-JC4"/>
-                                <include reference="iW4-Ty-PGk"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="bpW-pZ-4gB" id="Fk1-vQ-clI"/>
                         <outlet property="spinner" destination="cAa-QY-Gw5" id="Nlq-TL-zi2"/>
                         <outlet property="variablewebView" destination="kOe-wL-ghb" id="BOl-My-jAt"/>
                     </connections>
