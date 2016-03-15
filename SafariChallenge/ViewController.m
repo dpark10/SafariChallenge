@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIWebViewDelegate, UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIWebView *variablewebView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -16,12 +18,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"hi");
+    [self loadRequestWithString:@"http://www.google.com"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadRequestWithString:(NSString *)string {
+    NSURL *url = [NSURL URLWithString:string];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.variablewebView loadRequest:request];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self loadRequestWithString:textField.text];
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.spinner startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.spinner stopAnimating];
 }
 
 @end
