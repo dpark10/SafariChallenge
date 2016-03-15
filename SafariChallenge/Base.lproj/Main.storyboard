@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="width" constant="360" id="eUm-zp-zPF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DLB-l8-aNg"/>
@@ -236,6 +236,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="bpW-pZ-4gB" id="Fk1-vQ-clI"/>
+                        <outlet property="forwardButton" destination="Xea-V8-Jzq" id="rwN-HS-Mrl"/>
                         <outlet property="spinner" destination="cAa-QY-Gw5" id="Nlq-TL-zi2"/>
                         <outlet property="variablewebView" destination="kOe-wL-ghb" id="BOl-My-jAt"/>
                     </connections>

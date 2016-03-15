@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *variablewebView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
 
 
 @end
@@ -24,9 +25,20 @@
 }
 
 - (void)loadRequestWithString:(NSString *)string {
-    NSURL *url = [NSURL URLWithString:string];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.variablewebView loadRequest:request];
+    if ([string hasPrefix:@"http://"]) {
+        //Has Prefix
+        NSURL *url = [NSURL URLWithString:string];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.variablewebView loadRequest:request];
+    }
+    else
+    {
+        NSString *stringWithPrefix = [@"http://" stringByAppendingString:string];
+        NSURL *url = [NSURL URLWithString:stringWithPrefix];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.variablewebView loadRequest:request];
+        
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -41,6 +53,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.spinner stopAnimating];
     self.backButton.enabled = self.variablewebView.canGoBack;
+    self.forwardButton.enabled = self.variablewebView.canGoForward;
 
 }
 
@@ -63,5 +76,7 @@
 - (IBAction)onReloadButtonPressed:(id)sender {
     [_variablewebView reload];
 }
+
+
 
 @end
