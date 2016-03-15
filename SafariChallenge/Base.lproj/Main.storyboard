@@ -91,9 +91,22 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-pZ-4gB">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="9YX-sv-9wb"/>
+                                            <constraint firstAttribute="height" constant="30" id="PSN-os-rSH"/>
+                                        </constraints>
                                         <state key="normal" title="&lt;"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="30" y="17" width="30" height="30"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9YX-sv-9wb"/>
+                                                <exclude reference="PSN-os-rSH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="9YX-sv-9wb"/>
+                                                <include reference="PSN-os-rSH"/>
+                                            </mask>
                                         </variation>
                                         <connections>
                                             <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4c-cw-1AS"/>
@@ -101,15 +114,29 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bpW-pZ-4gB" firstAttribute="leading" secondItem="kf1-wR-SHJ" secondAttribute="leading" constant="8" id="1dk-I6-bKx"/>
+                                    <constraint firstAttribute="height" constant="64" id="Phn-bB-3LO"/>
+                                    <constraint firstAttribute="bottom" secondItem="bpW-pZ-4gB" secondAttribute="bottom" constant="8" id="lq8-mc-WUE"/>
+                                </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="bpW-pZ-4gB"/>
                                     </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="Phn-bB-3LO"/>
+                                        <exclude reference="1dk-I6-bKx"/>
+                                        <exclude reference="lq8-mc-WUE"/>
+                                    </mask>
                                 </variation>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="536" width="400" height="64"/>
+                                <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="bpW-pZ-4gB"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="Phn-bB-3LO"/>
+                                        <include reference="1dk-I6-bKx"/>
+                                        <include reference="lq8-mc-WUE"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -117,12 +144,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rbG-VE-rEo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2GV-uw-8uL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kf1-wR-SHJ" secondAttribute="bottom" id="7Yg-m0-JC4"/>
                             <constraint firstItem="rbG-VE-rEo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AUq-jy-4H0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kf1-wR-SHJ" secondAttribute="bottom" id="HaN-dI-4eU"/>
-                            <constraint firstItem="kf1-wR-SHJ" firstAttribute="top" secondItem="cAa-QY-Gw5" secondAttribute="bottom" constant="215" id="PZB-kS-vfe"/>
                             <constraint firstItem="cAa-QY-Gw5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pb1-cE-ytq"/>
                             <constraint firstItem="cAa-QY-Gw5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="To6-g4-ggL"/>
                             <constraint firstItem="rbG-VE-rEo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Y2h-WH-htM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kf1-wR-SHJ" secondAttribute="trailing" constant="-20" id="atb-wC-P4M"/>
+                            <constraint firstItem="kf1-wR-SHJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bu4-JQ-NLF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kOe-wL-ghb" secondAttribute="bottom" constant="40" id="iW4-Ty-PGk"/>
                             <constraint firstItem="kOe-wL-ghb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jDU-0w-nMh"/>
                             <constraint firstItem="kOe-wL-ghb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rqY-XW-hQG"/>
@@ -135,16 +163,17 @@
                                 <exclude reference="kf1-wR-SHJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HaN-dI-4eU"/>
-                                <exclude reference="iW4-Ty-PGk"/>
-                                <exclude reference="Pb1-cE-ytq"/>
-                                <exclude reference="To6-g4-ggL"/>
                                 <exclude reference="2GV-uw-8uL"/>
                                 <exclude reference="AUq-jy-4H0"/>
                                 <exclude reference="Y2h-WH-htM"/>
                                 <exclude reference="jDU-0w-nMh"/>
                                 <exclude reference="rqY-XW-hQG"/>
-                                <exclude reference="PZB-kS-vfe"/>
+                                <exclude reference="Pb1-cE-ytq"/>
+                                <exclude reference="To6-g4-ggL"/>
+                                <exclude reference="atb-wC-P4M"/>
+                                <exclude reference="bu4-JQ-NLF"/>
+                                <exclude reference="7Yg-m0-JC4"/>
+                                <exclude reference="iW4-Ty-PGk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -155,16 +184,17 @@
                                 <include reference="kf1-wR-SHJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HaN-dI-4eU"/>
-                                <include reference="iW4-Ty-PGk"/>
-                                <include reference="Pb1-cE-ytq"/>
-                                <include reference="To6-g4-ggL"/>
                                 <include reference="2GV-uw-8uL"/>
                                 <include reference="AUq-jy-4H0"/>
                                 <include reference="Y2h-WH-htM"/>
                                 <include reference="jDU-0w-nMh"/>
                                 <include reference="rqY-XW-hQG"/>
-                                <include reference="PZB-kS-vfe"/>
+                                <include reference="Pb1-cE-ytq"/>
+                                <include reference="To6-g4-ggL"/>
+                                <include reference="atb-wC-P4M"/>
+                                <include reference="bu4-JQ-NLF"/>
+                                <include reference="7Yg-m0-JC4"/>
+                                <include reference="iW4-Ty-PGk"/>
                             </mask>
                         </variation>
                     </view>

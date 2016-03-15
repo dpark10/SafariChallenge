@@ -42,8 +42,8 @@
 }
 
 - (IBAction)onBackButtonPressed:(id)sender {
-    if ([self.variablewebView canGoBack]) {
-        [self.variablewebView goBack];
+    if ([_variablewebView canGoBack]) {
+        [_variablewebView goBack];
     }
 }
 
