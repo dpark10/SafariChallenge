@@ -32,8 +32,7 @@
                                         <exclude reference="N7U-m1-Oup"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="7KV-um-g3y"/>
                                         <include reference="N7U-m1-Oup"/>
@@ -96,6 +95,9 @@
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="30" y="17" width="30" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4c-cw-1AS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,16 +135,16 @@
                                 <exclude reference="kf1-wR-SHJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="jDU-0w-nMh"/>
-                                <exclude reference="rqY-XW-hQG"/>
+                                <exclude reference="HaN-dI-4eU"/>
+                                <exclude reference="iW4-Ty-PGk"/>
+                                <exclude reference="Pb1-cE-ytq"/>
+                                <exclude reference="To6-g4-ggL"/>
                                 <exclude reference="2GV-uw-8uL"/>
                                 <exclude reference="AUq-jy-4H0"/>
                                 <exclude reference="Y2h-WH-htM"/>
-                                <exclude reference="Pb1-cE-ytq"/>
-                                <exclude reference="To6-g4-ggL"/>
+                                <exclude reference="jDU-0w-nMh"/>
+                                <exclude reference="rqY-XW-hQG"/>
                                 <exclude reference="PZB-kS-vfe"/>
-                                <exclude reference="HaN-dI-4eU"/>
-                                <exclude reference="iW4-Ty-PGk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -153,16 +155,16 @@
                                 <include reference="kf1-wR-SHJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="jDU-0w-nMh"/>
-                                <include reference="rqY-XW-hQG"/>
+                                <include reference="HaN-dI-4eU"/>
+                                <include reference="iW4-Ty-PGk"/>
+                                <include reference="Pb1-cE-ytq"/>
+                                <include reference="To6-g4-ggL"/>
                                 <include reference="2GV-uw-8uL"/>
                                 <include reference="AUq-jy-4H0"/>
                                 <include reference="Y2h-WH-htM"/>
-                                <include reference="Pb1-cE-ytq"/>
-                                <include reference="To6-g4-ggL"/>
+                                <include reference="jDU-0w-nMh"/>
+                                <include reference="rqY-XW-hQG"/>
                                 <include reference="PZB-kS-vfe"/>
-                                <include reference="HaN-dI-4eU"/>
-                                <include reference="iW4-Ty-PGk"/>
                             </mask>
                         </variation>
                     </view>

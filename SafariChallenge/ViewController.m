@@ -11,6 +11,7 @@
 @interface ViewController () <UIWebViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *variablewebView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+- (IBAction)onBackButtonPressed:(id)sender;
 
 @end
 
@@ -38,6 +39,12 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.spinner stopAnimating];
+}
+
+- (IBAction)onBackButtonPressed:(id)sender {
+    if ([self.variablewebView canGoBack]) {
+        [self.variablewebView goBack];
+    }
 }
 
 @end
